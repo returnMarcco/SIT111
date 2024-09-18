@@ -1,0 +1,47 @@
+/** SIT111 - 3.3P
+ * Jason Mark Vellucci | studentID: 221437402
+ *
+ */
+
+// PIN consts
+const int BTN_ONE_PIN = 2;
+const int BTN_TWO_PIN = 4;
+
+const int LED_ONE_PIN = 8;
+const int LED_TWO_PIN = 12;
+
+void setup() { // Initializer function
+  // put your setup code here, to run once:
+  Serial.begin(9600); // Debugging code
+  pinMode(BTN_ONE_PIN, INPUT);
+  pinMode(BTN_TWO_PIN, INPUT);
+  
+  pinMode(LED_ONE_PIN, OUTPUT);
+  pinMode(LED_TWO_PIN, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int btnOneState  = digitalRead(BTN_ONE_PIN);
+  int btnTwoState = digitalRead(BTN_TWO_PIN); 
+  Serial.print(btnOneState);
+  Serial.print(btnTwoState);
+  
+  if (btnOneState == HIGH) {
+    // Turn the LED on for `LED_ONE_PIN`
+    digitalWrite(LED_ONE_PIN, HIGH);
+  } else {
+    // Turn the LED off for `LED_ONE_PIN`
+    digitalWrite(LED_ONE_PIN, LOW);
+  }
+  
+  if (btnTwoState == HIGH) {
+    // Turn the LED on for `LED_ONE_PIN`
+    digitalWrite(LED_TWO_PIN, HIGH);
+  } else {
+    // Turn the LED off for `LED_ONE_PIN`
+    digitalWrite(LED_TWO_PIN, LOW);
+  }
+
+  delay(500); // ms
+}
