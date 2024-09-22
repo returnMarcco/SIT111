@@ -3,6 +3,8 @@
 * Jason Mark Vellucci | SID: 221437402
 */
 
+// Reads `soil moisture` levels from the physical environment via a physical sensor.
+
 const int SENSOR_PIN = A0; // Analog input pin connected to the soil moisture sensor.
 
 void setup() {
