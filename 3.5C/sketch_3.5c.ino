@@ -41,6 +41,7 @@ void loop() {
 
   // Read temperature and humidity from the DHT22 sensor and print
   Serial.println("SENSOR READINGS");
+  
   float temperature = dht.readTemperature(); // method calls on the `dht` object.
   Serial.print("Temperature: ");
   Serial.println(temperature);
