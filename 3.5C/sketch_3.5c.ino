@@ -25,7 +25,7 @@ const int SOIL_MOISTURE_THRESHOLD   = 70;
 
 void setup() {
   Serial.begin(9600); // init. `serial comms`.
-  dht.begin();
+  dht.begin(); // Activate the `Humidity & Temp Sensor`
   
   // init. INPUT
   pinMode(SOIL_MOISTURE_PIN, INPUT);
