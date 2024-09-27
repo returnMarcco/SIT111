@@ -1,3 +1,8 @@
+/**
+* Jason Mark Vellucci | SID: 221437402
+* SIT111 3.6P | T2, 2024
+*/
+
 // Include the servo library:
 #include "Servo.h"
 
@@ -41,5 +46,5 @@ void loop() {
   // (use a delay to slow down the sweep)
 
   // This satisfies the requirements for both `Task 1 & Task 2`.
-  moveServo(angle_array, angle_array_size ,myservo);
+  moveServo(angle_array, angle_array_size, myservo);
 }
